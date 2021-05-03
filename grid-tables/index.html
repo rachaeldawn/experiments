@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body>
+  <div class="table">
+
+    <div class="heading">
+      <div class="head-item total">Total</div>
+      <div class="head-item keyword">Keyword</div>
+      <div class="head-item regions">Regions</div>
+      <div class="head-item locations">Municipalities</div>
+      <div class="head-item alerts">Alerts</div>
+      <div class="head-item last-read">Last read</div>
+      <div class="head-item controls"></div>
+    </div>
+
+    <div class="items">
+
+      <div class="alert">
+        <div class="total item">
+          <span class="label">123 docs</span>
+        </div>
+
+        <div class="keyword item">
+          <span class="label">Fire Hydrants are Cool Bro</span>
+        </div>
+
+        <div class="regions item">
+          <span class="label">Any</span>
+        </div>
+
+        <div class="locations item">
+          <span class="label">Any</span>
+        </div>
+
+        <div class="alerts item">
+          <span class="label">Daily | 8:00am</span>
+        </div>
+
+        <div class="last-read item">
+          <span class="label">2 days ago</span>
+        </div>
+
+        <div class="controls item">
+          <div class="control">
+            <ion-icon name="pencil-outline"></ion-icon>
+          </div>
+
+          <div class="control">
+            <ion-icon name="trash-outline"></ion-icon>
+          </div>
+
+          <div class="toggle-button control" onclick="toggleNib(event)">
+            <div class="nib"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="alert">
+        <div class="total item">
+          <span class="label">123 docs</span>
+        </div>
+        <div class="keyword item">
+          <span class="label">COVID</span>
+        </div>
+        <div class="regions item">
+          <span class="label">Alberta, Texas</span>
+        </div>
+        <div class="locations item">
+          <span class="label">Grande Prairie, Calgary, Edmonton</span>
+        </div>
+
+        <div class="alerts item">
+          <span class="label">M Tu W Th F | 8:00 AM</span>
+        </div>
+
+        <div class="last-read item">
+          <span class="label">2 days ago</span>
+        </div>
+
+        <div class="controls item">
+          <div class="control">
+            <ion-icon name="pencil-outline"></ion-icon>
+          </div>
+          <div class="control">
+            <ion-icon name="trash-outline"></ion-icon>
+          </div>
+          <div class="toggle-button control" onclick="toggleNib(event)">
+            <div class="nib"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="alert">
+        <div class="total item">
+          <span class="label">123 docs</span>
+        </div>
+
+        <div class="keyword item">
+          <span class="label">This is a really long one that is still valid</span>
+        </div>
+
+        <div class="regions item">
+          <span class="label">Any</span>
+        </div>
+
+        <div class="locations item">
+          <span class="label">Calgary, Houston</span>
+        </div>
+
+        <div class="alerts item">
+          <span class="label">Tu Th</span>
+        </div>
+
+        <div class="last-read item">
+          <span class="descriptor">Last read: </span>
+          <span class="label">2 days ago</span>
+        </div>
+
+        <div class="controls item">
+          <div class="control">
+            <ion-icon name="pencil-outline"></ion-icon>
+          </div>
+          <div class="control">
+            <ion-icon name="trash-outline"></ion-icon>
+          </div>
+          <div class="toggle-button control" onclick="toggleNib(event)">
+            <div class="nib"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="alert">
+
+        <div class="total item">
+          <span class="label">123 docs</span>
+        </div>
+
+        <div class="keyword item">
+          <span class="label">name item</span>
+        </div>
+
+        <div class="regions item">
+          <span class="label">One, Two, Three, Four</span>
+        </div>
+        <div class="locations item">
+          <span class="label">Any</span>
+        </div>
+
+        <div class="alerts item">
+          <span class="label">Tu Th</span>
+        </div>
+
+        <div class="last-read item">
+          <span class="label">2 days ago</span>
+        </div>
+
+        <div class="controls item">
+          <div class="control">
+            <ion-icon name="pencil-outline"></ion-icon>
+          </div>
+          <div class="control">
+            <ion-icon name="trash-outline"></ion-icon>
+          </div>
+          <div class="toggle-button control" onclick="toggleNib(event)">
+            <div class="nib"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  <script src="scripts/nib.js"></script>
+</body>
+
+</html>
