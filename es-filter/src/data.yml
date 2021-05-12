@@ -1,0 +1,9 @@
+pageSize: 10
+page: 1
+sortBy: publication_date.keyword
+sortOrder: asc
+keyword: COVID
+locations:
+  - "Calgary"
+  - "Edmonton"
+  - "Grande Prairie"
