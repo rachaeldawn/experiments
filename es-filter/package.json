@@ -1,9 +1,18 @@
 {
   "dependencies": {
     "@elastic/elasticsearch": "7",
+    "@types/elasticsearch": "^5.0.37",
     "bodybuilder": "^2.4.0",
+    "class-transformer": "^0.4.0",
     "dotenv": "^9.0.2",
     "elasticsearch": "^16.7.2",
+    "es6-shim": "^0.35.6",
+    "moment": "^2.29.1",
+    "moment-timezone": "^0.5.33",
+    "reflect-metadata": "^0.1.13",
     "yaml": "^1.10.2"
+  },
+  "devDependencies": {
+    "@types/node": "^15.3.0"
   }
 }
