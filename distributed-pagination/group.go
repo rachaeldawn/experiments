@@ -44,7 +44,7 @@ func (grp Map) Populate() Map {
 	return grp
 }
 
-// ResetRanges ...
+// ResetRanges resets the skip and limit to 0 in case something has changed them
 func (grp Map) ResetRanges() Map {
 	for _, g := range grp {
 		g.Skip, g.Limit = 0, 0
@@ -53,9 +53,11 @@ func (grp Map) ResetRanges() Map {
 	return grp
 }
 
-// FillRanges ...
+// FillRanges takes page information and populates all groups with the per-page skip and limit
+// numbers for use in properly paginated groupings
 func (grp Map) FillRanges(page, size int) Map {
 
+	// Create a sorted list of the groups based on ascending order
 	groupCount := len(grp)
 	groups := make([]*Group, 0)
 	for _, g := range grp {
@@ -78,6 +80,7 @@ func (grp Map) FillRanges(page, size int) Map {
 
 	// how many ids have been scanned
 	offset := 0
+	// how much is "left" that we can grab
 	poolSize := size
 
 	for _, v := range groups {
@@ -88,24 +91,33 @@ func (grp Map) FillRanges(page, size int) Map {
 		// eg: Offset 20, len 33: 20 -> 53
 		groupStart, groupEnd := offset, offset+groupLen
 
+		// is the group in range? If not, just set to zeroes and move on
 		if groupStart > endIndex || groupEnd <= startIndex {
 			offset += len(v.IDs)
 			v.Skip, v.Limit = 0, 0
 			continue
 		}
 
+		// Define the inner-most boundaries of the group, where the left-most bound is the
+		// largest number out of the group's start or the page's start, and the right bound is the
+		// smallest number out of the group's end or the page's end
 		rightBound := int(math.Min(float64(groupEnd), float64(endIndex)))
 		leftBound := int(math.Max(float64(groupStart), float64(startIndex)))
 
+		// Skip is a no-transform number matching the "start" of the valid boundary
 		if v.Skip = startIndex - groupStart; v.Skip < 0 {
 			v.Skip = 0
 		}
 
+		// Limit is the maximum size from the left boundary to the right boundary
 		if v.Limit = rightBound - leftBound; v.Limit > poolSize {
 			v.Limit = poolSize
 		}
 
+		// Inform the next group so they know where their boundary starts
 		offset += len(v.IDs)
+
+		// Draw from the pool based on how much we took
 		poolSize -= v.Limit
 	}
 
