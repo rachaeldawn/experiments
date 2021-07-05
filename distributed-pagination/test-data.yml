@@ -1,0 +1,174 @@
+One Group:
+  Groups:
+    First:
+      Size: 23
+      Order: 1
+  Results:
+    - First:
+        Skip: 0
+        Limit: 10
+    - First:
+        Skip: 10
+        Limit: 10
+    - First:
+        Skip: 20
+        Limit: 3
+
+Two Groups:
+  Groups:
+    First:
+      Size: 33
+      Order: 1
+    Second:
+      Size: 14
+      Order: 2
+  Results:
+    - First: # 00-90
+        Skip: 0
+        Limit: 10
+    - First: # 10-19
+        Skip: 10
+        Limit: 10
+    - First: # 20-29 
+        Skip: 20
+        Limit: 10
+    - First: # 30-39
+        Skip: 30
+        Limit: 3
+      Second:
+        Skip: 0
+        Limit: 7
+    - Second:  # 40-49
+        Skip: 7
+        Limit: 7
+
+
+Three Groups:
+  Groups: # 70 items
+    First:
+      Size: 33
+      Order: 1
+    Second:
+      Size: 14
+      Order: 2
+    Third:
+      Size: 23
+      Order: 3
+  Results:
+    - First: # 00-10
+        Skip: 0
+        Limit: 10
+    - First: # 11-20
+        Skip: 10
+        Limit: 10
+    - First: # 21-30
+        Skip: 20
+        Limit: 10
+    - First: # 31-40
+        Skip: 30
+        Limit: 3
+      Second: 
+        Skip: 0
+        Limit: 7
+    - Second: # 41-50
+        Skip: 7
+        Limit: 7
+      Third:
+        Skip: 0
+        Limit: 3
+    - Third: # 51-60
+        Skip: 3
+        Limit: 10
+    - Third: # 61-70
+        Skip: 13
+        Limit: 10
+
+Four Groups:
+  Groups:
+    First:  # 33
+      Size: 33
+      Order: 1
+    Second: # 47
+      Size: 14
+      Order: 2
+    Third:  # 70
+      Size: 23
+      Order: 3
+    Fourth: # 80
+      Size: 10
+      Order: 4
+  Results:
+    - First: # 00-10
+        Skip: 0
+        Limit: 10
+    - First: # 11-20
+        Skip: 10
+        Limit: 10
+    - First: # 21-30
+        Skip: 20
+        Limit: 10
+    - First: # 31-40
+        Skip: 30
+        Limit: 3
+      Second: 
+        Skip: 0
+        Limit: 7
+    - Second: # 41-50
+        Skip: 7
+        Limit: 7
+      Third:
+        Skip: 0
+        Limit: 3
+    - Third: # 51-60
+        Skip: 3
+        Limit: 10
+    - Third: # 61-70
+        Skip: 13
+        Limit: 10
+    - Fourth: # 70-79
+        Skip: 0
+        Limit: 10
+    - Fourth:
+        Skip: 0
+        Limit: 0
+
+Five Groups:
+  Groups:
+    First:
+      Size: 10
+      Order: 1
+    Second:
+      Size: 4
+      Order: 2
+    Third:
+      Size: 4
+      Order: 3
+    Fourth:
+      Size: 2
+      Order: 4
+    Fifth:
+      Size: 22
+      Order: 5
+  Results:
+    - First:
+        Skip: 0
+        Limit: 10
+    - Second:
+        Skip: 0
+        Limit: 4
+      Third: 
+        Skip: 0
+        Limit: 4
+      Fourth:
+        Skip: 0
+        Limit: 2
+    - Fifth:
+        Skip: 0
+        Limit: 10
+    - Fifth:
+        Skip: 10
+        Limit: 10
+    - Fifth:
+        Skip: 20
+        Limit: 2
+
