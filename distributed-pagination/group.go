@@ -105,14 +105,10 @@ func (grp Map) FillRanges(page, size int) Map {
 		leftBound := int(math.Max(float64(groupStart), float64(startIndex)))
 
 		// Skip is a no-transform number matching the "start" of the valid boundary
-		if v.Skip = startIndex - groupStart; v.Skip < 0 {
-			v.Skip = 0
-		}
+		v.Skip = leftBound - groupStart
 
-		// Limit is the maximum size from the left boundary to the right boundary
-		if v.Limit = rightBound - leftBound; v.Limit > poolSize {
-			v.Limit = poolSize
-		}
+		// Limit is the maximum size from the left boundary to the right boundary, where it can be
+		v.Limit = rightBound - leftBound
 
 		// Inform the next group so they know where their boundary starts
 		offset += len(v.IDs)
